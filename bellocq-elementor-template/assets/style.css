@@ -1,0 +1,514 @@
+/*
+ * Bellocq Elementor Template — Frontend Styles
+ * Fonts  : Cormorant Garamond (serif display) + Montserrat (sans body)
+ * Palette: #F5F0E8 cream  |  #1a1a1a warm-black  |  #C8B89A warm-sand accent
+ */
+
+/* =========================================================
+   UTILITY CLASSES
+   ========================================================= */
+
+.bellocq-italic { font-style: italic; }
+.ls-wide        { letter-spacing: 0.2em; }
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+   ========================================================= */
+
+.bellocq-announcement {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: #F5F0E8;
+	margin: 0;
+	text-align: center;
+}
+
+/* =========================================================
+   STICKY HEADER
+   ========================================================= */
+
+.bellocq-sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+	transition: box-shadow 0.3s ease;
+}
+
+.bellocq-sticky-header.scrolled {
+	box-shadow: 0 2px 24px rgba(26, 26, 26, 0.09);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.bellocq-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+.bellocq-nav ul li a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 300;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	text-decoration: none;
+	transition: opacity 0.25s ease;
+}
+
+.bellocq-nav ul li a:hover { opacity: 0.45; }
+
+.bellocq-nav-icons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.bellocq-nav-icons a {
+	color: #1a1a1a;
+	text-decoration: none;
+	line-height: 1;
+	transition: opacity 0.25s ease;
+}
+
+.bellocq-nav-icons a:hover { opacity: 0.45; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.bellocq-hero-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: rgba(245, 240, 232, 0.75);
+	margin: 0 0 24px;
+	text-align: center;
+}
+
+.bellocq-hero-heading {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: clamp(56px, 9vw, 120px);
+	line-height: 1.0;
+	color: #F5F0E8;
+	text-align: center;
+	margin: 0 0 28px;
+}
+
+.bellocq-hero-sub {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	color: rgba(245, 240, 232, 0.75);
+	text-align: center;
+	margin: 0 0 52px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.bellocq-btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 14px 40px;
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border: 1px solid;
+}
+
+.bellocq-btn-light {
+	color: #F5F0E8;
+	border-color: rgba(245, 240, 232, 0.8);
+	background: transparent;
+}
+
+.bellocq-btn-light:hover {
+	background: #F5F0E8;
+	color: #1a1a1a;
+}
+
+.bellocq-btn-dark {
+	color: #1a1a1a;
+	border-color: #1a1a1a;
+	background: transparent;
+}
+
+.bellocq-btn-dark:hover {
+	background: #1a1a1a;
+	color: #F5F0E8;
+}
+
+.bellocq-text-link {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 2px;
+	transition: opacity 0.2s ease;
+}
+
+.bellocq-text-link:hover { opacity: 0.45; }
+
+.bellocq-text-link--light { color: #F5F0E8; }
+
+/* =========================================================
+   SECTION LABELS
+   ========================================================= */
+
+.bellocq-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.28em;
+	text-transform: uppercase;
+	color: #9a9a9a;
+	margin: 0 0 16px;
+}
+
+.bellocq-label--light { color: rgba(245, 240, 232, 0.5); }
+
+/* =========================================================
+   BRAND STATEMENT HEADING (mixed italic / uppercase)
+   ========================================================= */
+
+.bellocq-brand-heading {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	font-size: clamp(28px, 4vw, 60px);
+	line-height: 1.25;
+	text-align: center;
+	color: #1a1a1a;
+	margin: 0 0 32px;
+}
+
+.bellocq-brand-heading em {
+	font-style: italic;
+}
+
+/* =========================================================
+   IMAGE CARDS — hover zoom
+   ========================================================= */
+
+.bellocq-card {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	display: block;
+}
+
+.bellocq-card img {
+	transition: transform 0.65s ease;
+	display: block;
+	width: 100%;
+}
+
+.bellocq-card:hover img { transform: scale(1.04); }
+
+.bellocq-card-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 32px;
+	background: linear-gradient(to top, rgba(26,26,26,0.68) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+.bellocq-card-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: #F5F0E8;
+	margin: 0 0 10px;
+}
+
+.bellocq-card-shop {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 9px;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(245,240,232,0.7);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(245,240,232,0.4);
+	padding-bottom: 2px;
+	transition: color 0.2s, border-color 0.2s;
+	pointer-events: all;
+}
+
+.bellocq-card:hover .bellocq-card-shop {
+	color: #F5F0E8;
+	border-color: #F5F0E8;
+}
+
+/* =========================================================
+   DECORATIVE DIVIDER
+   ========================================================= */
+
+.bellocq-divider {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin: 0 0 32px;
+}
+
+.bellocq-divider-line {
+	width: 48px;
+	height: 1px;
+	background: rgba(26,26,26,0.25);
+	flex-shrink: 0;
+}
+
+.bellocq-divider-diamond {
+	width: 6px;
+	height: 6px;
+	border: 1px solid rgba(26,26,26,0.4);
+	transform: rotate(45deg);
+	flex-shrink: 0;
+}
+
+/* =========================================================
+   NEWSLETTER FORM
+   ========================================================= */
+
+.bellocq-newsletter-form {
+	width: 100%;
+	max-width: 520px;
+	margin: 0 auto;
+}
+
+.bellocq-newsletter-row {
+	display: flex;
+	border: 1px solid rgba(245,240,232,0.35);
+}
+
+.bellocq-newsletter-input {
+	flex: 1;
+	background: transparent;
+	border: none;
+	padding: 16px 22px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.06em;
+	color: #F5F0E8;
+	outline: none;
+}
+
+.bellocq-newsletter-input::placeholder { color: rgba(245,240,232,0.4); }
+
+.bellocq-newsletter-btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background: #F5F0E8;
+	border: none;
+	padding: 16px 28px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color 0.25s;
+}
+
+.bellocq-newsletter-btn:hover { background: #e5e0d8; }
+
+.bellocq-newsletter-fine {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	color: rgba(245,240,232,0.32);
+	text-align: center;
+	margin: 14px 0 0;
+}
+
+/* =========================================================
+   PULL-QUOTES / PRESS
+   ========================================================= */
+
+.bellocq-kind-words {
+	font-family: 'Cormorant Garamond', serif;
+	font-style: italic;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 0.06em;
+	color: #aaa;
+	text-align: center;
+	margin: 0 0 60px;
+}
+
+.bellocq-pullquote {
+	font-family: 'Cormorant Garamond', serif;
+	font-style: italic;
+	font-weight: 300;
+	font-size: clamp(22px, 2.6vw, 36px);
+	line-height: 1.55;
+	color: #1a1a1a;
+	margin: 0 0 28px;
+}
+
+.bellocq-press-logo {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.32em;
+	text-transform: uppercase;
+	color: #bbb;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.bellocq-footer-tagline {
+	font-family: 'Cormorant Garamond', serif;
+	font-style: italic;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.9;
+	color: rgba(245,240,232,0.5);
+	margin: 0;
+}
+
+.bellocq-footer-col-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 9px;
+	font-weight: 400;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: rgba(245,240,232,0.38);
+	margin: 0 0 18px;
+}
+
+.bellocq-footer-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.bellocq-footer-links li a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	color: rgba(245,240,232,0.62);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.bellocq-footer-links li a:hover { color: #F5F0E8; }
+
+.bellocq-footer-address {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 2;
+	color: rgba(245,240,232,0.5);
+	font-style: normal;
+}
+
+.bellocq-footer-social {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 8px;
+}
+
+.bellocq-footer-social a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	color: rgba(245,240,232,0.62);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.bellocq-footer-social a:hover { color: #F5F0E8; }
+
+.bellocq-footer-copy {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 0.12em;
+	color: rgba(245,240,232,0.28);
+	text-align: center;
+	margin: 0;
+}
+
+/* =========================================================
+   EDITORIAL SECTION (Cult Favorite)
+   ========================================================= */
+
+.bellocq-editorial-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.28em;
+	text-transform: uppercase;
+	color: rgba(245,240,232,0.6);
+	margin: 0 0 20px;
+}
+
+.bellocq-editorial-heading {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	font-size: clamp(44px, 6.5vw, 96px);
+	line-height: 1.0;
+	color: #F5F0E8;
+	margin: 0 0 32px;
+}
+
+.bellocq-editorial-heading em { font-style: italic; }
+
+/* =========================================================
+   RESPONSIVE (≤ 768 px)
+   ========================================================= */
+
+@media (max-width: 768px) {
+	.bellocq-nav ul    { display: none; }
+	.bellocq-hero-heading { font-size: 52px; }
+
+	.bellocq-newsletter-row {
+		flex-direction: column;
+	}
+
+	.bellocq-newsletter-btn {
+		width: 100%;
+		padding: 16px;
+	}
+
+	.bellocq-card-overlay { padding: 20px; }
+}
